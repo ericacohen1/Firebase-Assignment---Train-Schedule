@@ -65,12 +65,8 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
     console.log(firstTrainTime);
     console.log(frequency);
 
-    // current time
-    var currentTime = moment();
-    // changes the time formal 
-    var firstTrain =  moment.unix(firstTrainTime).format("HH:mm");
-    // first time minus a year to insure it comes before current time
-    var firstTrainTimeConverted = moment(firstTrain, "hh:mm").subtract(1, "years");
+   
+    var firstTrainTimeConverted = moment(firstTrainTime, "hh:mm").subtract(1, "years");
     // difference bw time in minutes
     var diffTime = moment().diff(moment(firstTrainTimeConverted), "minutes");
     // remaing time after using modulus for time difference and frequency
@@ -81,7 +77,6 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
     // minutes away is added to the current time to calculate this 
     var nextArrival = moment().add(minutesAway, "minutes").format("HH:mm");
 
-   
 
     // Add each train's data into the table
     $("tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" +
