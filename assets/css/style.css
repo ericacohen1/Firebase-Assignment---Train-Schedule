@@ -1,0 +1,21 @@
+body {
+    background-image: url("https://www.kubipet.com/data/out/175/iwp779929465-train-backgrounds-wallpapers.jpg");
+    /* This made the image full screen */
+    background-size: cover;
+}
+
+.container {
+    opacity: 0.8;
+}
+
+h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 70px;
+}
+
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 25px;
+}
+
